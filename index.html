@@ -1,40 +1,621 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/style_reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./main.js"></script>
+    <title>Sistema de Seuridad</title>
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="container__contenido">
-            <div class="container__informaciones">
-                <div class="container__texto">
-                    <h1></h1>
-                    <p class="texto__parrafo"></p>
+    <header>
+        <aside class="aside">
+            <nav class="nav">
+                <div class="nav__logo">
+                    <i><img src="/components/image/logo_FyT-removebg-preview.png" alt="Logo formaletas y equipos"></i>
+                    <h1>Formaletas y Equipos</h1>
                 </div>
-                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
-                <div class="chute container__botones">
-                    <button onclick="verificarIntento();" class="container__boton" id="intento">Intentar</button>
-                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
-                </div>
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#section1" class="nav__link nav__link--active">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                                    <path fill="FFFFFF" d="M3 9.5v11.75A3.75 3.75 0 0 0 6.75 25h14.5A3.75 3.75 0 0 0 25 21.25V6.75A3.75 3.75 0 0 0 21.25 3H9.5v6.5zm1.5 11.75V18.5h5v5H6.75a2.25 2.25 0 0 1-2.25-2.25M9.5 11v6h-5v-6zM11 23.5v-5h6v5zM17 11v6h-6v-6zm1.5 12.5v-5h5v2.75a2.25 2.25 0 0 1-2.25 2.25zm5-12.5v6h-5v-6zm-2.25-6.5a2.25 2.25 0 0 1 2.25 2.25V9.5h-5v-5zM11 4.5h6v5h-6z" />
+                                </svg>
+                            </i>
+                            <h2>Componentes</h2>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#section2" class="nav__link">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <g fill="FFFFFF" fill-rule="evenodd" clip-rule="evenodd">
+                                        <path d="M14.722 16.744a1.5 1.5 0 0 1-1.302.756H6.58a1.5 1.5 0 0 1-1.302-.756l-3.429-6a1.5 1.5 0 0 1 0-1.488l3.429-6A1.5 1.5 0 0 1 6.58 2.5h6.84a1.5 1.5 0 0 1 1.302.756l3.429 6a1.5 1.5 0 0 1 0 1.488zM13.42 16.5a.5.5 0 0 0 .434-.252l3.428-6a.5.5 0 0 0 0-.496l-3.428-6a.5.5 0 0 0-.434-.252H6.58a.5.5 0 0 0-.434.252l-3.428 6a.5.5 0 0 0 0 .496l3.428 6a.5.5 0 0 0 .434.252z" />
+                                        <path d="M10 7.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5M6.5 10a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0" />
+                                    </g>
+                                </svg>
+                            </i>
+                            <h2>Funciones</h2>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#section3" class="nav__link">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="FFFFFF" d="m4.114 12.006l4.24 4.24q.14.14.15.345q.01.203-.15.363t-.354.16t-.354-.16l-4.388-4.389q-.131-.13-.184-.267q-.053-.136-.053-.298t.053-.298t.184-.267l4.388-4.389q.146-.146.347-.156t.366.156t.166.357t-.165.357zm15.773-.012l-4.24-4.24q-.141-.14-.15-.344t.15-.364t.353-.16t.354.16l4.388 4.389q.131.13.184.267t.053.298t-.053.298t-.184.268l-4.388 4.388q-.146.146-.344.153q-.198.006-.364-.159t-.165-.357q0-.191.165-.357z" />
+                                </svg>
+                            </i>
+                            <h2>Software</h2>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#section4" class="nav__link">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <path fill="FFFFFF" d="M1 2.828c.885-.37 2.154-.769 3.388-.893c1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493c-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752c1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81c-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02c1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877c1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                                </svg>
+                            </i>
+                            <h2>Recomendaciones</h2>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav__user">
+                <span class="nav__admin">
+                    <img src="/components/image/logo FyT.jfif" alt="">
+                    <h3>Brayan Pabon</h3>
+                </span>
+                
+                <span class="nav__credits">
+                    <p>Copyright - 2024 - Formaletas&Equipos</p>
+                </span>
             </div>
-            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
-        </div>
-    </div>
-
-
-
-
-    <script src="app.js" defer></script>
+        </aside>
+    </header>
+    <main>
+        <section class="sections" id="section1">
+            <span class="sections__title">
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                            <path fill="FFFFFF" d="M3 9.5v11.75A3.75 3.75 0 0 0 6.75 25h14.5A3.75 3.75 0 0 0 25 21.25V6.75A3.75 3.75 0 0 0 21.25 3H9.5v6.5zm1.5 11.75V18.5h5v5H6.75a2.25 2.25 0 0 1-2.25-2.25M9.5 11v6h-5v-6zM11 23.5v-5h6v5zM17 11v6h-6v-6zm1.5 12.5v-5h5v2.75a2.25 2.25 0 0 1-2.25 2.25zm5-12.5v6h-5v-6zm-2.25-6.5a2.25 2.25 0 0 1 2.25 2.25V9.5h-5v-5zM11 4.5h6v5h-6z" />
+                        </svg>  
+                    </i>
+                    <h2>Componentes</h2>
+            </span>
+            <div class="section__components">
+                <article class="section__articule">
+                    <h2>Grabador con 4TB de almacenamiento</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/grabador 8 canales.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicado en la zona superior de los suministros dentro de una caja negra de protección. Su función es almacenar las grabaciones realizadas.</p>
+                            <span class="articule__download">
+                                <a href="/pdfs/FT001 - GRAB.pdf" download="FT001 - GRAB">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Sirenas estroboscopicas</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/sirenas.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicadas en la zona interior de producción con gran distancia una de otra, su función es alertar y disuadir intrusos.</p>
+                            <span class="articule__download">
+                                <a href="/pdfs/FT001 - SIR.pdf" download="FT001 - SIR">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Camaras de 5Mp</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/camaras de 5mp.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicadas en las esquinas exteriores de la bodega. Su función es monitorear la zona exterior de la bodega.</p>
+                            <span class="articule__download">
+                                <a href="/pdfs/FT002 - CAM.pdf" download="FT002 - CAM">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Pulsadores de emergencia</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/pulsador.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicados en la oficina uno al lado del otro. Su función es desactivar las alarmas y cancelar el sonido.</p>
+                            <span class="articule__download">
+                                <a href="/pdfs/FT001 - PULS.pdf" download="FT001 - PULS">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Camaras de 2Mp</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/camaras de 2mp.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicadas dentro de la oficina y dentro de la zona de almacenamiento. Su función es monitorear.</p>
+                            <span class="articule__download">
+                                <a href="/pdfs/FT001 - CAM.pdf" download="FT001 - CAM">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Pulsador de pánico</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/boton de panico.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicado en la oficina al lado derecho de caja. Su función es activar las alarmas de seguridad.</p>
+                            <span class="articule__download">
+                                <a href="#">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Cerca Electrica</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/logo FyT.jfif" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicada en la zona exterior de la bodega. Su función es detectar y disuadir intrusos.</p>
+                            <span class="articule__download">
+                                <a>
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+                <article class="section__articule">
+                    <h2>Luz estroboscopica</h2>
+                    <div class="articule__container">
+                        <img src="/components/image/luces.jpg" alt="Grabador de 8 canales">
+                        <div class="articule__info">
+                            <p>Ubicada en la zona de producción en sincronía con las sirenas. Su función es alertar y disuadir intrusos.</p>
+                            <span class="articule__download">
+                                <a href="/pdfs/FT001 - LUZ.pdf" download="FT001 - LUZ">
+                                    Descargar ficha técnica
+                                    <i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="FFFFFF" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z" />
+                                        </svg>
+                                    </i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="sections" id="section2">
+            <span class="sections__title">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                        <g fill="FFFFFF" fill-rule="evenodd" clip-rule="evenodd">
+                            <path d="M14.722 16.744a1.5 1.5 0 0 1-1.302.756H6.58a1.5 1.5 0 0 1-1.302-.756l-3.429-6a1.5 1.5 0 0 1 0-1.488l3.429-6A1.5 1.5 0 0 1 6.58 2.5h6.84a1.5 1.5 0 0 1 1.302.756l3.429 6a1.5 1.5 0 0 1 0 1.488zM13.42 16.5a.5.5 0 0 0 .434-.252l3.428-6a.5.5 0 0 0 0-.496l-3.428-6a.5.5 0 0 0-.434-.252H6.58a.5.5 0 0 0-.434.252l-3.428 6a.5.5 0 0 0 0 .496l3.428 6a.5.5 0 0 0 .434.252z" />
+                            <path d="M10 7.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5M6.5 10a3.5 3.5 0 1 1 7 0a3.5 3.5 0 0 1-7 0" />
+                        </g>
+                    </svg>  
+                </i>
+                <h2>Funciones</h2>
+            </span>
+            <div class="section__funtions">
+                <span class="section__card">
+                    <div class="first__card">
+                        <img class="card__image" src="/components/image/perimetro.jpg" alt="">
+                        <div class="card__info">
+                            <span>1</span>
+                            <h2>Monitoreo y alerta</h2>
+                            <p>
+                                El sistema cuenta con una tecnología que nos permite crear un perímetro virtual, este mismo detecta tanto si se entra o sale de él.
+                            </p>
+                            <p>
+                                Cuando este perímetro es rebasado, se activan automáticamente las sirenas y luces estroboscópicas durante 10s siempre y cuando no se detecte mas movimiento en el perímetro.
+                            </p>
+                        </div>
+                        <img class="logo__image" src="/components/image/logo_FyT-removebg-preview.png" alt="logo">
+                    </div>
+                    <div class="second__card">
+                        <img class="card__image" src="/components/image/cerca.jpg" alt="">
+                        <div class="card__info">
+                            <span>2</span>
+                            <h2>Cerca electrica</h2>
+                            <p>
+                                El sistema cuenta con una tecnología que nos permite crear un perímetro virtual, este mismo detecta tanto si se entra o sale de él.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="third__card">
+                        <img class="card__image" src="/components/image/panico.jpg" alt="">
+                        <div class="card__info">
+                            <span>3</span>
+                            <h2>Activación manual</h2>
+                            <p>
+                                El sistema de seguridad también puede ser activado por medio de un pulsador de pánico desde la oficina en la zona de cartera.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fourth__card">
+                        <div class="card__images">
+                            <img class="card__image" src="/components/image/pulsador amarillo.jpg" alt="">
+                            <img class="card__image" src="/components/image/pulsador naranja.jpg" alt="">
+                        </div>
+                        <div class="card__info">
+                            <span>4</span>
+                            <h2>Desactivacón del sistema</h2>
+                            <p>
+                                En caso de que el sistema presente fallos y falsos positivos se puede desactivar mediante el pulsador de emergencia correspondiente.
+                            </p>
+                            <p>
+                                El pulsador con caja naranja desactiva las alarmas que sean accionadas por el paso del perímetro virtual.
+                            </p>
+                            <p>
+                                El pulsador con caja amarilla desactiva las alarmas accionadas por la cerca eléctrica.
+                            </p>
+                        </div>
+                    </div>
+                </span>        
+            </div>
+        </section>
+        <section class="sections" id="section3">
+            <span class="sections__title">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="FFFFFF" d="m4.114 12.006l4.24 4.24q.14.14.15.345q.01.203-.15.363t-.354.16t-.354-.16l-4.388-4.389q-.131-.13-.184-.267q-.053-.136-.053-.298t.053-.298t.184-.267l4.388-4.389q.146-.146.347-.156t.366.156t.166.357t-.165.357zm15.773-.012l-4.24-4.24q-.141-.14-.15-.344t.15-.364t.353-.16t.354.16l4.388 4.389q.131.13.184.267t.053.298t-.053.298t-.184.268l-4.388 4.388q-.146.146-.344.153q-.198.006-.364-.159t-.165-.357q0-.191.165-.357z" />
+                    </svg>  
+                </i>
+                <h2>Software</h2>
+            </span>
+            <div class="section__software">
+                <article class="software__article">
+                    <ul class="software__slider">
+                        <li><img src="/components/image/software1.png" alt="Software de seguridad"></li>
+                        <!-- <li><img src="" alt="Software de seguridad"></li> -->
+                    </ul>
+                    <div class="software__paragraphr">
+                        <p>
+                            El sistema cuenta con un software en el cual se puede configurar muchos detalles como por ejemplo el perímetro virtual, horarios de activación del sistema, reglas de AI, configuración de alarma, visualización de grabaciones entre otras. Podemos acceder mediante la siguiente IP: <strong>192.168.2.6</strong> de forma local.
+                        </p>
+                    </div> 
+                </article>
+                <ul class="software__container">
+                    <li class="software__option">
+                        <div>
+                            <h2>En vivo</h2>
+                            <i class="icon__option">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12s4.477 10 10 10" />
+                                        <path d="M17.197 9q-.15-.259-.323-.5m.937 5a6.01 6.01 0 0 1-4.311 4.311" />
+                                    </g>
+                                </svg>
+                            </i>
+                        </div>
+                        <p>
+                            En esta opción podemos ver las cámaras y monitorear cada vista, asi como tambien podemos hacer grabaciones instantaneas 
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>Busqueda</h2>
+                        <i class="icon__option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+                                <path fill="FFFFFF" d="M232 220h-64.82a100 100 0 1 0-39.18 8h104a4 4 0 0 0 0-8M36 128a92 92 0 1 1 92 92a92.1 92.1 0 0 1-92-92m92-28a20 20 0 1 0-20-20a20 20 0 0 0 20 20m0-32a12 12 0 1 1-12 12a12 12 0 0 1 12-12m20 108a20 20 0 1 0-20 20a20 20 0 0 0 20-20m-32 0a12 12 0 1 1 12 12a12 12 0 0 1-12-12m60-28a20 20 0 1 0-20-20a20 20 0 0 0 20 20m0-32a12 12 0 1 1-12 12a12 12 0 0 1 12-12m-96-8a20 20 0 1 0 20 20a20 20 0 0 0-20-20m0 32a12 12 0 1 1 12-12a12 12 0 0 1-12 12" />
+                            </svg>
+                        </i>
+                        </div>
+                        <p>
+                            En esta opción podemos ver las grabaciones de las cámaras ya sea por el día que queramos, el tipo de grabación.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>Alarma</h2>
+                            <i class="icon__option">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path fill="FFFFFF" d="M11.5 20v-4h1v4zm7.575-2.948l-2.838-2.813l.713-.714l2.814 2.839zm-14.15 0l-.689-.688l2.814-2.839l.714.714zM5 5v1.154q0 .269.173.442t.443.173h12.769q.269 0 .442-.173T19 6.154V5zm2.523 2.77l.493 1.365q.076.192.23.298t.346.105h6.816q.192 0 .346-.105q.154-.106.23-.299l.493-1.365zm1.07 2.769q-.516 0-.935-.292q-.42-.291-.6-.782L6.462 7.77h-.846q-.672 0-1.144-.472T4 6.154V4h16v2.154q0 .671-.472 1.143t-1.144.472h-.846l-.669 1.72q-.186.459-.59.754t-.914.295zM5 5v1.77z" />
+                                </svg>
+                            </i>
+                        </div>                       
+                        <p>
+                            En esta opción podemos configurar el puerto de entrada y salida de la alarma, la detección por video y sus parámetros entre otros.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>IA</h2>
+                        <i class="icon__option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="#000">
+                                    <path d="M16 22v-.5c0-1.105.932-2 1.922-2.489c.963-.476 1.772-1.26 1.875-2.18L20 15l2-1l-2.5-3.75A8.25 8.25 0 0 0 8 2.665M6.5 16.996V22m0-5.004a8.27 8.27 0 0 1-3-3.911m3 3.911c.75.53 1.594.937 2.5 1.194" />
+                                    <path d="M2.75 3.25L6 5.5h4M3.5 3.25a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0m-.75 5.5H10m-6.5 0a.75.75 0 1 1-1.5 0a.75.75 0 0 1 1.5 0" />
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                        <p>
+                            En esta opción podemos configurar el puerto de entrada y salida de la alarma, la detección por video y sus parámetros entre otros.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>Mantenimiento</h2>
+                        <i class="icon__option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="FFFFFF" d="M10.758 15.192q.465.466 1.194.424q.729-.041 1.064-.524l5.253-7.323l-7.361 5.216q-.502.334-.559 1.038t.409 1.17M12 5q1.379 0 2.51.336q1.132.335 2.256 1.025l-.92.623q-.883-.482-1.828-.733T12 6Q8.675 6 6.337 8.338T4 14q0 1.05.288 2.075T5.1 18h13.8q.575-.95.838-1.975T20 13.9q0-.9-.232-1.894t-.734-1.852l.624-.92q.73 1.252 1.033 2.356T21 13.888q.006 1.29-.287 2.408q-.292 1.118-.91 2.254q-.12.2-.365.325T18.9 19H5.1q-.275 0-.51-.134q-.234-.135-.394-.393q-.496-.875-.846-1.974T3 14q0-1.844.7-3.481q.699-1.637 1.909-2.867T8.471 5.71T12 5m.04 6.96" />
+                            </svg>
+                        </i>
+                        </div>
+                        <p>
+                            En esta opción podemos ver el informe del sistema, ver la red de información y hacer el diagnostico inteligente para validad el correcto funcionamiento del software.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>Backup</h2>
+                            <i class="icon__option">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5">
+                                        <path stroke-miterlimit="10" d="M18.024 7.043A8.374 8.374 0 0 0 3.74 12.955" />
+                                        <path stroke-linejoin="round" d="m17.35 2.75l.832 3.372a1.123 1.123 0 0 1-.854 1.382l-3.372.843" />
+                                        <path stroke-miterlimit="10" d="M5.976 16.957a8.374 8.374 0 0 0 14.285-5.912" />
+                                        <path stroke-linejoin="round" d="m6.65 21.25l-.832-3.372a1.124 1.124 0 0 1 .855-1.382l3.371-.843" />
+                                    </g>
+                                </svg>
+                            </i>
+                        </div>
+                        <p>
+                            En esta opción podemos hacer el respaldo de videos e imágenes filtrándola ruta, canal de grabación, tipo, periodo entre otros parámetros.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>Visión</h2>
+                        <i class="icon__option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="FFFFFF" d="M18.435 3.06H5.565a2.5 2.5 0 0 0-2.5 2.5v8.88a2.507 2.507 0 0 0 2.5 2.5h2.91l-.37 3H7a.5.5 0 0 0 0 1h10.01a.5.5 0 0 0 0-1H15.9l-.37-3h2.91a2.507 2.507 0 0 0 2.5-2.5V5.56a2.5 2.5 0 0 0-2.505-2.5M14.9 19.94H9.115l.37-3h5.03Zm5.04-5.5a1.5 1.5 0 0 1-1.5 1.5H5.565a1.5 1.5 0 0 1-1.5-1.5V5.56a1.5 1.5 0 0 1 1.5-1.5h12.87a1.5 1.5 0 0 1 1.5 1.5Z" />
+                            </svg>
+                        </i>
+                        </div>
+                        <p>
+                            En esta opción podemos ver todo el tema de la visualización, así como ajustar el recorrido.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                    <li class="software__option">
+                        <div>
+                            <h2>Audio</h2>
+                        <i class="icon__option">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="FFFFFF" d="M8.077 20H5.616q-.691 0-1.153-.462T4 18.384V12q0-1.664.626-3.118T6.34 6.34t2.542-1.714T12 4t3.118.626T17.66 6.34t1.714 2.542T20 12v6.385q0 .69-.462 1.152T18.384 20h-2.461v-6.154H19V12q0-2.925-2.037-4.962T12 5T7.038 7.038T5 12v1.846h3.077zm-1-5.154H5v3.539q0 .23.192.423t.423.192h1.462zm9.846 0V19h1.462q.23 0 .423-.192t.192-.424v-3.538zm-9.846 0H5zm9.846 0H19z" />
+                            </svg>
+                        </i>
+                        </div>
+                        <p>
+                            En esta opción podemos configurar todo lo relacionado al audio, así como también podemos reproducirlos.
+                        </p>
+                        <div>
+                            <a href="">Saber mas</a>
+                        <i class="icon__link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="none" stroke="#CA0101" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path stroke-dasharray="20" stroke-dashoffset="20" d="M3 12h17.5">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="20;0" />
+                                    </path>
+                                    <path stroke-dasharray="12" stroke-dashoffset="12" d="M21 12l-7 7M21 12l-7 -7">
+                                        <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="12;0" />
+                                    </path>
+                                </g>
+                            </svg>
+                        </i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="sections" id="section4">
+            <span class="sections__title">
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path fill="FFFFFF" d="M1 2.828c.885-.37 2.154-.769 3.388-.893c1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493c-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752c1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81c-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02c1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877c1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                    </svg>   
+                </i>
+                <h2>Recomendaciones</h2>
+            </span>
+            <div class="section__recommendations">
+                <ul class="recommendations__list">
+                    <li class="recommendations__item">
+                        <span>1</span>
+                        <p>
+                            Se recomiendo hacer un mantenimiento periódico de todo el sistema de seguridad tanto hardware como software para tener un correcto funcionamiento de este.
+                        </p>
+                    </li>
+                    <li class="recommendations__item">
+                        <span>2</span>
+                        <p>
+                            Mantener el software del sistema actualizado para garantizar la seguridad y eficiencia del sistema.
+                        </p>
+                    </li>
+                    <li class="recommendations__item">
+                        <span>3</span>
+                        <p>
+                            Hacer pruebas de funcionamiento periodicamente para confirmar que el sistema funciona correctamente
+                        </p>
+                    </li>
+                    <li class="recommendations__item">
+                        <span>4</span>
+                        <p>
+                            En caso de tener problemas del sistema mas alla de sus conocimiento contactarse con soporte.
+                        </p>
+                    </li>
+                    <li class="recommendations__item">
+                        <span>5</span>
+                        <p>
+                            En caso de tener problemas de daño de alguno de los componentes del sistema de seguridad, cambiarlo lo mas pronto posible
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
-
 </html>
